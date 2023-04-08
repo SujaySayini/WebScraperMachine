@@ -10,8 +10,10 @@ inputJson = {
 URL = inputJson["URL"]
 
 print(URL)
+# get the body
 page = requests.get(URL)
-
+# beautiful soup
+# filter into titles
 soup = BeautifulSoup(page.content, "html.parser")
 
 results = soup.find(id="ResultsContainer")
